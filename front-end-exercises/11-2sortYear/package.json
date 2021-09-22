@@ -1,0 +1,12 @@
+{
+  "name": "dates",
+  "version": "1.0.0",
+  "description": "ordenação de datas ",
+  "main": "index.js",
+  "author": "joao",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "date-fns": "^2.24.0"
+  }
+}
