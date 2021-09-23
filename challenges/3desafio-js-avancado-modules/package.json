@@ -1,0 +1,13 @@
+{
+  "name": "3-1desafio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-json-modules main.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.24.0"
+  }
+}
