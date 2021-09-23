@@ -57,7 +57,7 @@ return a.data_nasc - b.data_nasc
 
 
 orderDates.forEach((elem)=>{
-return elem.data_nasc= format(new Date(elem.data_nasc), 'dd/MM/yyyy')
+return elem.data_nasc= format(new Date(elem.data_nasc), 'dd/MM/yyyy') //forma é da biblioteca date-fns, transforma a data do formado EUA pra BR
 
 })
 console.log("Array ordenado por datas de nascimento: ")
