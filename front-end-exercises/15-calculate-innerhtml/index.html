@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <input type="number" name="n1" id="n1" placeholder="Primeiro número" />
+
+    <select name="calc" id="calc">
+      <option value="soma">Soma</option>
+      <option value="subtração">Subtração</option>
+      <option value="multiplicação">Multiplicação</option>
+      <option value="divisão">Divisão</option>
+    </select>
+
+    <input type="number" name="n1" id="n2" placeholder="Segundo número" />
+
+    <input type="button" value="=" id="calcular" onclick="res()" />
+
+    <p id="resultado"></p>
+  </body>
+  <script src="js.js"></script>
+</html>

@@ -68,7 +68,7 @@ console.log('Exercício 1d')
 let ageColab = colaboradores.sort((a, b) => {
   if (a.idade === b.idade) {
     const order = { estagiário: 0, 'front-end': 1, 'back-end': 2, designer: 3 }
-    colaboradores.sort((a, b) => order[a.cargo] - order[b.cargo])
+    return order[a.cargo] - order[b.cargo]
   } else {
     return a.idade - b.idade
   }
@@ -140,7 +140,7 @@ console.log(`
 console.log('Exercício 2c')
 
 const orderDecres = installments.sort((a, b) => b.value - a.value)
-console.log(order)
+console.log(orderDecres)
 
 console.log(`
 ----------------------------------------------------------
