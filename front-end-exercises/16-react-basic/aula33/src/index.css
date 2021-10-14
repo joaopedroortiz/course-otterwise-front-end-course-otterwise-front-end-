@@ -1,0 +1,35 @@
+.App {
+  background-color: rgb(93, 93, 93);
+  width: 100%;
+  height: 100vh;
+  padding: 0px 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.description h2 {
+  text-align: center;
+  padding: 50px;
+}
+
+.formulario {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.formulario input {
+  margin: 25px;
+}
