@@ -69,12 +69,16 @@
     </main>
     <section>
       <div class="card-form">
+        <p id="warning"></p>
         <label id="name-label" for="name">Nome completo</label>
         <input type="text" name="name" id="name" required />
+        <p class="warning-inputs" id="warning-name"></p>
         <label id="email-label" for="email">E-mail</label>
         <input type="email" name="email" id="email" required />
+        <p class="warning-inputs" id="warning-email"></p>
         <label id="phone-label" for="phone">Telefone</label>
         <input type="tel" name="phone" id="phone" required />
+        <p class="warning-inputs" id="warning-phone"></p>
         <label id="message-label" for="message">Mensagem</label>
         <textarea
           name="message"
@@ -83,7 +87,7 @@
           rows="10"
           required
         ></textarea>
-        <p id="warning"></p>
+        <p class="warning-inputs" id="warning-text"></p>
         <input type="submit" value="ENVIAR" id="button" />
       </div>
     </section>

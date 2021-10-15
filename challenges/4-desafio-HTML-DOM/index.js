@@ -5,6 +5,13 @@ const message = document.querySelector("#message");
 const phone = document.querySelector("#phone");
 const button = document.querySelector("#button");
 
+//Confirmação para submissão
+
+let nomeValid = false;
+let emailValid = false;
+let messageValid = false;
+let phoneValid = false;
+
 // Aviso status do submit
 const warning = document.querySelector("#warning");
 
@@ -26,24 +33,38 @@ async function sendJson() {
   };
 
   //status de cada input
-  nome.value == ""
-    ? (nameLabel.style.color = "red")
-    : (nameLabel.style.color = "black");
+  if (nome.value == "" || !nome.value.includes(" ")) {
+    document.getElementById("warning-name").innerText =
+      "Informe o nome completo";
+  } else {
+    document.getElementById("warning-name").innerText = "";
+    nomeValid = true;
+  }
 
-  email.value == ""
-    ? (emailLabel.style.color = "red")
-    : (emailLabel.style.color = "black");
+  if (email.value == "" || !email.value.includes("@", ".")) {
+    document.getElementById("warning-email").innerText = "Informe o email";
+  } else {
+    document.getElementById("warning-email").innerText = "";
+    emailValid = true;
+  }
 
-  message.value == ""
-    ? (messageLabel.style.color = "red")
-    : (messageLabel.style.color = "black");
+  if (message.value.length < 5) {
+    document.getElementById("warning-text").innerText = "Informe a mensagem";
+  } else {
+    document.getElementById("warning-text").innerText = "";
+    messageValid = true;
+  }
 
-  phone.value == ""
-    ? (phoneLabel.style.color = "red")
-    : (phoneLabel.style.color = "black");
+  if (phone === "") {
+    document.getElementById("warning-phone").innerText =
+      "Informe o telefone corretamente";
+  } else {
+    document.getElementById("warning-phone").innerText = "";
+    phoneValid = true;
+  }
 
   //Condição de envio das informações caso todos campos estejam preenchidos
-  if (nome.value && email.value && phone.value && message.value) {
+  if (nomeValid && emailValid && phoneValid && messageValid) {
     const response = await fetch(
       "https://otterwise-fake-api.herokuapp.com/contact",
       {
@@ -60,12 +81,13 @@ async function sendJson() {
       phone.value = "";
       message.value = "";
       warning.innerText = `Dados enviados com sucessso!`;
+      setTimeout(() => {
+        warning.innerText = "";
+      }, 3500);
     } else if (data.type) {
       warning.innerText = `Erro, por favor tente novamente mais tarde.`;
       console.log();
     }
     console.log(data);
-  } else {
-    warning.innerText = "Dados incompletos.";
   }
 }

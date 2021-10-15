@@ -129,8 +129,8 @@ section {
   float: left;
   color: #403423;
   font-weight: bolder;
-  padding-bottom: 7px;
-  padding-top: 17px;
+  padding-bottom: 5px;
+  margin-top: 2px;
   font-size: 12px;
 }
 
@@ -148,8 +148,17 @@ section {
   display: flex;
   font-size: 13px;
   justify-content: center;
-  margin: 2px 8px 5px 0px;
+  margin: -5px 8px 5px 0px;
   height: 15px;
+  color: #e6bc7e;
+}
+
+.warning-inputs {
+  font-size: 10px;
+  height: 10px;
+  margin: 1px 0 5px 0px;
+  color: rgb(199, 31, 31);
+  text-align: center;
 }
 
 .card-form input:focus {
@@ -164,6 +173,7 @@ section {
   border-radius: 10px;
   font-weight: 700;
   padding: 5px;
+  margin-bottom: -4px;
 }
 
 #message:focus {
@@ -172,6 +182,7 @@ section {
 
 #button {
   margin-bottom: 25px;
+  margin-top: 10px;
   height: 35px;
   background-color: #bf9d69;
   color: white;
@@ -303,8 +314,16 @@ footer p {
     position: absolute;
     display: none;
   }
+  #warning {
+    margin: -9px 7px 15px 0px;
+  }
 
   #close-icon {
     transform: rotate(90deg);
+  }
+
+  .text-container h1,
+  p {
+    padding-top: 0;
   }
 }
