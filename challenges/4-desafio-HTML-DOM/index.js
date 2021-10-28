@@ -15,12 +15,6 @@ let phoneValid = false;
 // Aviso status do submit
 const warning = document.querySelector("#warning");
 
-// Labels
-const nameLabel = document.getElementById("name-label");
-const emailLabel = document.getElementById("email-label");
-const messageLabel = document.getElementById("message-label");
-const phoneLabel = document.getElementById("phone-label");
-
 // Criação do evento click
 button.addEventListener("click", sendJson);
 
@@ -84,9 +78,8 @@ async function sendJson() {
       setTimeout(() => {
         warning.innerText = "";
       }, 3500);
-    } else if (data.type) {
+    } else {
       warning.innerText = `Erro, por favor tente novamente mais tarde.`;
-      console.log();
     }
     console.log(data);
   }
