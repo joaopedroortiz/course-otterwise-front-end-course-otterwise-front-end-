@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Button, TextField } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-
 import styled from "styled-components";
 import { Body } from "../components/Body";
 import { useForm } from "react-hook-form";
 import { Link, useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import { Box } from "@mui/system";
+
+import { Title } from "./Add";
 
 const HeaderBox = styled.div`
   height: 90px;
@@ -18,10 +19,14 @@ const HeaderBox = styled.div`
   padding: 20px 25% 20px 25%;
   display: flex;
   justify-content: center;
+  @media (max-width: 800px) {
+    padding: 20px 5% 20px 5%;
+  }
 `;
 
 const CardBox = styled.div`
-  width: 580px;
+  max-width: 580px;
+  width: 80%;
   height: 280px;
   border: 1px solid gray;
   background-color: white;
@@ -99,7 +104,7 @@ function Edit() {
               <ArrowBackIcon />
             </Button>
           </Link>
-          <h3> Edit your Task!</h3>
+          <Title> Edit your Task!</Title>
         </TitleBox>
       </HeaderBox>
 

@@ -15,13 +15,17 @@ const HeaderBox = styled.div`
   background-color: #c0bebe;
   margin-bottom: 30px;
   font-size: 28px;
-  padding: 20px 25% 20px 25%;
   display: flex;
+  padding: 20px 25% 20px 25%;
   justify-content: center;
+  @media (max-width: 800px) {
+    padding: 20px 5% 20px 5%;
+  }
 `;
 
 const CardBox = styled.div`
-  width: 580px;
+  max-width: 580px;
+  width: 80%;
   height: 280px;
   border: 1px solid gray;
   background-color: white;
@@ -43,6 +47,12 @@ const TitleBox = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
+export const Title = styled.h3`
+  font-size: 30px;
+  text-align: center;
+`;
+
 function Add() {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
@@ -100,7 +110,7 @@ function Add() {
               <ArrowBackIcon />
             </Button>
           </Link>
-          <h3> Create your new Task!</h3>
+          <Title> Create your new Task!</Title>
         </TitleBox>
       </HeaderBox>
 

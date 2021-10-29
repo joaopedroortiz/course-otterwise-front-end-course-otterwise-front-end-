@@ -18,7 +18,7 @@ export const InsideHeaderBox = styled.div`
   max-width: 1100px;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
 `;
 
 function Header() {

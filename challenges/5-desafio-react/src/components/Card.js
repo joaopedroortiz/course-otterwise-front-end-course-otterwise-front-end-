@@ -34,14 +34,18 @@ const TextBox = styled.div`
   align-content: center;
   align-items: center;
   text-align: center;
-  min-width: 220px;
   width: 45%;
+  height: 70px;
+  & p {
+    word-break: break-word;
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+  }
 `;
 
 function Card({ title, description, id, setState }) {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(!open);
-
   const history = useHistory();
   async function deletation() {
     try {
